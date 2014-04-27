@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @version_servicio.version %>
+</p>
+
+<p>
+  <strong>Fechainicio:</strong>
+  <%= @version_servicio.fechaInicio %>
+</p>
+
+<p>
+  <strong>Fechafin:</strong>
+  <%= @version_servicio.fechaFin %>
+</p>
+
+<%= link_to 'Edit', edit_version_servicio_path(@version_servicio) %> |
+<%= link_to 'Back', version_servicios_path %>

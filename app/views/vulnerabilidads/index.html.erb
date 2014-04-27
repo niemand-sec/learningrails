@@ -1,0 +1,29 @@
+<h1>Listing vulnerabilidads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Fechadescubrimiento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vulnerabilidads.each do |vulnerabilidad| %>
+      <tr>
+        <td><%= vulnerabilidad.nombre %></td>
+        <td><%= vulnerabilidad.descripcion %></td>
+        <td><%= vulnerabilidad.fechaDescubrimiento %></td>
+        <td><%= link_to 'Show', vulnerabilidad %></td>
+        <td><%= link_to 'Edit', edit_vulnerabilidad_path(vulnerabilidad) %></td>
+        <td><%= link_to 'Destroy', vulnerabilidad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vulnerabilidad', new_vulnerabilidad_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @sistema_operativo.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @sistema_operativo.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_sistema_operativo_path(@sistema_operativo) %> |
+<%= link_to 'Back', sistema_operativos_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @puerto.numero %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @puerto.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_puerto_path(@puerto) %> |
+<%= link_to 'Back', puertos_path %>

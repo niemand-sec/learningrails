@@ -1,0 +1,29 @@
+<h1>Listing version_servicios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Fechainicio</th>
+      <th>Fechafin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @version_servicios.each do |version_servicio| %>
+      <tr>
+        <td><%= version_servicio.version %></td>
+        <td><%= version_servicio.fechaInicio %></td>
+        <td><%= version_servicio.fechaFin %></td>
+        <td><%= link_to 'Show', version_servicio %></td>
+        <td><%= link_to 'Edit', edit_version_servicio_path(version_servicio) %></td>
+        <td><%= link_to 'Destroy', version_servicio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Version servicio', new_version_servicio_path %>

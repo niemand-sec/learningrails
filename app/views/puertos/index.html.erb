@@ -1,0 +1,27 @@
+<h1>Listing puertos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numero</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @puertos.each do |puerto| %>
+      <tr>
+        <td><%= puerto.numero %></td>
+        <td><%= puerto.descripcion %></td>
+        <td><%= link_to 'Show', puerto %></td>
+        <td><%= link_to 'Edit', edit_puerto_path(puerto) %></td>
+        <td><%= link_to 'Destroy', puerto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Puerto', new_puerto_path %>

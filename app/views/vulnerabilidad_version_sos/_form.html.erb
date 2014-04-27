@@ -1,0 +1,17 @@
+<%= form_for(@vulnerabilidad_version_so) do |f| %>
+  <% if @vulnerabilidad_version_so.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vulnerabilidad_version_so.errors.count, "error") %> prohibited this vulnerabilidad_version_so from being saved:</h2>
+
+      <ul>
+      <% @vulnerabilidad_version_so.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

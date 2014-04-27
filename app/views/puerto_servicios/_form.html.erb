@@ -1,0 +1,17 @@
+<%= form_for(@puerto_servicio) do |f| %>
+  <% if @puerto_servicio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@puerto_servicio.errors.count, "error") %> prohibited this puerto_servicio from being saved:</h2>
+
+      <ul>
+      <% @puerto_servicio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

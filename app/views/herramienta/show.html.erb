@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @herramientum.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @herramientum.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_herramientum_path(@herramientum) %> |
+<%= link_to 'Back', herramienta_path %>

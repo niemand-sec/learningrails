@@ -1,0 +1,29 @@
+<%= form_for(@version_servicio) do |f| %>
+  <% if @version_servicio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@version_servicio.errors.count, "error") %> prohibited this version_servicio from being saved:</h2>
+
+      <ul>
+      <% @version_servicio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :version %><br>
+    <%= f.text_field :version %>
+  </div>
+  <div class="field">
+    <%= f.label :fechaInicio %><br>
+    <%= f.date_select :fechaInicio %>
+  </div>
+  <div class="field">
+    <%= f.label :fechaFin %><br>
+    <%= f.date_select :fechaFin %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
